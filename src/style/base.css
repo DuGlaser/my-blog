@@ -1,0 +1,77 @@
+:root {
+  --fontFamily: "Montserrat", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3",
+    "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+code,
+li {
+  font-family: var(--fontFamily);
+}
+
+p {
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin: 2.4rem 0 2.2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin: 3rem 0 1.75rem;
+}
+
+blockquote {
+  /* margin-left: -1.75rem; */
+  /* margin-right: 1.75rem; */
+  padding-bottom: 0;
+  padding-left: 1.42188rem;
+  padding-right: 0;
+  padding-top: 0;
+  margin: 1.75rem 0;
+  font-size: 1.20112rem;
+  line-height: 1.75rem;
+  color: hsla(0, 0%, 0%, 0.59);
+  font-style: italic;
+  border-left: 0.32813rem solid hsla(0, 0%, 0%, 0.9);
+}
+
+.gatsby-highlight {
+  margin: 2rem 0;
+}
+
+img {
+  margin: 2rem 0;
+}
+
+ul {
+  margin-left: 1.75rem;
+  margin-right: 0;
+  margin-top: 1.5rem;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.5rem;
+  list-style-position: outside;
+  list-style-image: none;
+  list-style: disc;
+}
+
+li {
+  margin-bottom: 1.5rem;
+  display: list-item;
+}
