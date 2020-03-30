@@ -13,13 +13,16 @@ const header = css({
 
 const title = css({
   color: "#fff",
+  margin: 0,
+  textDecoration: `none`,
 })
 
-const h1 = css({})
 const Header = () => {
   return (
     <header css={header}>
-      <h1 css={title}>dame blog</h1>
+      <Link to={"/"} style={{ boxShadow: `none`, color: `inherit` }}>
+        <h1 css={title}>dame blog</h1>
+      </Link>
     </header>
   )
 }
