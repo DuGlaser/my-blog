@@ -14,7 +14,7 @@ const header = css({
 const title = css({
   color: "#fff",
   margin: 0,
-  textDecoration: `none`,
+  textDecoration: "none",
 })
 
 const Header = () => {

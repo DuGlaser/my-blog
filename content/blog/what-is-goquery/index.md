@@ -1,7 +1,7 @@
 ---
 title: goqueryとは？
 date: "2019-12-09T22:12:03.284Z"
-description: "Hello World"
+description: "goでスクレイピングしたいと考え、google先生に質問すると皆こぞってgoqueryを使っています。しかし、goqueryを説明してくれている記事はあまり見当たらなかった為、今回まとめてみました。"
 ---
 
 # はじめに

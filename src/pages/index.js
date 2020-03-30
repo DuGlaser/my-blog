@@ -5,6 +5,19 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import Article from "../components/article"
+import { css } from "@emotion/core"
+
+const content = css({
+  width: "100%",
+  display: "grid",
+  gridAutoRows: "1fr",
+  gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
+  justifyContent: "space-between",
+  alignItems: "center",
+  gridRowGap: "80px",
+  gridColumnGap: "40px",
+})
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -16,33 +29,18 @@ const BlogIndex = ({ data, location }) => {
       <SEO title={siteTitle} description={siteDisc} />
       {/* TODO:CREATE header */}
       {/* <Bio /> */}
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          // TODO:FIX article style
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
+      <div css={content}>
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          const articleObj = {
+            title: title,
+            slug: node.fields.slug,
+            date: node.frontmatter.date,
+            description: node.frontmatter.description,
+          }
+          return <Article {...articleObj} />
+        })}
+      </div>
     </Layout>
   )
 }
