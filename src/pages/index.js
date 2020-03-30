@@ -12,7 +12,7 @@ const content = css({
   width: "100%",
   display: "grid",
   gridAutoRows: "1fr",
-  gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
+  gridTemplateColumns: "repeat(auto-fit, minmax(100%, 1fr))",
   justifyContent: "space-between",
   alignItems: "center",
   gridRowGap: "80px",
