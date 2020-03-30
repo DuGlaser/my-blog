@@ -8,11 +8,12 @@ import { rhythm } from "../utils/typography"
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
+  const siteDisc = data.site.siteMetadata.description
   const posts = data.allMarkdownRemark.edges
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO />
+      <SEO title={siteTitle} description={siteDisc} />
       {/* TODO:CREATE header */}
       {/* <Bio /> */}
       {posts.map(({ node }) => {
