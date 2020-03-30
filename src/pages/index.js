@@ -13,10 +13,12 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All posts" />
-      <Bio />
+      {/* TODO:CREATE header */}
+      {/* <Bio /> */}
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
+          // TODO:FIX article style
           <article key={node.fields.slug}>
             <header>
               <h3
