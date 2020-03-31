@@ -8,16 +8,11 @@ import { rhythm } from "../utils/typography"
 import Article from "../components/article"
 import { css } from "@emotion/core"
 
-const content = css({
-  width: "100%",
-  display: "grid",
-  gridAutoRows: "1fr",
-  gridTemplateColumns: "repeat(auto-fit, minmax(100%, 1fr))",
-  justifyContent: "space-between",
-  alignItems: "center",
-  gridRowGap: "80px",
-  gridColumnGap: "40px",
-})
+const grid = css`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+`
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -29,7 +24,7 @@ const BlogIndex = ({ data, location }) => {
       <SEO title={siteTitle} description={siteDisc} />
       {/* TODO:CREATE header */}
       {/* <Bio /> */}
-      <div css={content}>
+      <div css={grid}>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const articleObj = {
