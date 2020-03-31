@@ -3,6 +3,14 @@
     "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+}
+
+* {
+  font-size: 1.3rem;
+}
+
 h1,
 h2,
 h3,
@@ -20,7 +28,7 @@ p {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 3rem 0;
 }
 
@@ -74,4 +82,8 @@ ul {
 li {
   margin-bottom: 1.5rem;
   display: list-item;
+}
+
+main > article {
+  padding: 0 10%;
 }

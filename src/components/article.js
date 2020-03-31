@@ -8,11 +8,10 @@ const article = css({
   maxWidth: "100%",
   height: "400px",
   boxShadow: "0 0 8px #ccc",
-  padding: "1rem",
   margin: "0 auto",
 })
 
-const Article = ({ slug, title, date, description }) => {
+const Article = ({ slug, title, date, description, thumbnail }) => {
   return (
     <article key={slug} css={article}>
       <Link
@@ -20,8 +19,10 @@ const Article = ({ slug, title, date, description }) => {
         to={slug}
       >
         <header>
+          <img css={{ margin: 0 }} src={thumbnail} />
           <h3
             style={{
+              padding: "0 1rem",
               marginTop: rhythm(1),
               marginBottom: rhythm(1),
             }}
@@ -30,6 +31,7 @@ const Article = ({ slug, title, date, description }) => {
           </h3>
           <small
             style={{
+              padding: "0 1rem",
               display: "inline-block",
               marginBottom: rhythm(1),
             }}
@@ -39,6 +41,9 @@ const Article = ({ slug, title, date, description }) => {
         </header>
         <section>
           <p
+            style={{
+              padding: "0 1rem",
+            }}
             dangerouslySetInnerHTML={{
               __html: description,
             }}

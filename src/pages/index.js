@@ -10,7 +10,7 @@ import { css } from "@emotion/core"
 
 const grid = css`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 2rem;
 `
 
@@ -32,6 +32,7 @@ const BlogIndex = ({ data, location }) => {
             slug: node.fields.slug,
             date: node.frontmatter.date,
             description: node.frontmatter.description,
+            thumbnail: node.frontmatter.thumbnail,
           }
           return <Article {...articleObj} />
         })}
@@ -60,6 +61,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            thumbnail
           }
         }
       }
