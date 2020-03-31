@@ -2,6 +2,7 @@
 title: goqueryとは？
 date: "2019-12-09T22:12:03.284Z"
 description: "goでスクレイピングしたいと考え、google先生に質問すると皆こぞってgoqueryを使っています。しかし、goqueryを説明してくれている記事はあまり見当たらなかった為、今回まとめてみました。"
+thumbnail: "https://golang.org/doc/gopher/fiveyears.jpg"
 ---
 
 # はじめに
@@ -328,3 +329,6 @@ https://www.youtube.com/embed/cQ7STILAS0M
 # 最後に
 今回は簡単にgoqueryの説明について書きました。自分で調べながら、これを使えば簡単な画像クローラーくらいはすぐに実装できそうだと感じました。今までフロント側をやってきた身としてはこう言うツールを簡単に実装できるgolangは勉強していてとても楽しいです！
 アドベントカレンダーはあと一日分あるので次回はgolangで何かを実装してみたいと思います！！
+
+## サムネイル画像について
+> The Go gopher was designed by Renee French.(http://reneefrench.blogspot.com/)
