@@ -76,7 +76,7 @@ githubv4とはgolangでgithub v4 のgraphQLを扱いやすくするためのpack
 では、取得したトークンを```.env```ファイルに設定します。
 ```.env```ファイルを開いて次のように記述します
 
-```.env:.env
+```.env:title=.env
 GITHUB_TOKEN = トークンをここに貼り付け
 ```
 
@@ -98,7 +98,7 @@ $ go get github.com/kazuph/go-binenv
 
 次にコードを書いていきます。先に結果だけ出しておきます。
 
-```go:main.go
+```go:title=main.go
 func getTime() (time.Time, time.Time) {
 	t := time.Now()
 	y := time.Now().AddDate(0, 0, -1)
@@ -216,7 +216,7 @@ variable := map[string]interface{}{
 DISCORD_WEBHOOK_TEST = webhookのurl
 ```
 
-```go:main.go
+```go:title=main.go
 type DiscordImage struct {
 	URL string `json:"url"`
 	H   int    `json:"height"`
@@ -281,7 +281,7 @@ func main(){
 
 createMessageについてはmain.goと同じ階層に新しくmessage.goと言うファイルを作成し、記述しました
 
-```go:message.go
+```go:title=message.go
 func (dw *DiscordWebhook) CreateMessage(q githubv4.Int) {
 
 	commit := fmt.Sprintf("今日のコミット数は%v回です！！", q)
