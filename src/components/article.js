@@ -9,6 +9,7 @@ const article = css({
   height: "400px",
   boxShadow: "0 0 8px #ccc",
   padding: "1rem",
+  margin: "0 auto",
 })
 
 const Article = ({ slug, title, date, description }) => {
