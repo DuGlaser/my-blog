@@ -392,3 +392,6 @@ discordに結果が来ると思います
 goを真面目に勉強し始めてからまだ１週間ちょっとですが、golangはとてもシンプルで個人的に大好きです。また、herokuでのデプロイは思った以上に簡単でびっくりしました。これからもアウトプットして成長していけたらと思います！
 今回作成したものはこちらに載せておきます
 > https://github.com/DuGlaser/Notice_CommitContributions
+
+## サムネイル画像について
+> The Go gopher was designed by Renee French.(http://reneefrench.blogspot.com/)
